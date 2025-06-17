@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.resume {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel, .right-panel {
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.left-panel {
+    width: 24%; /* 将左边栏宽度调整为24% */
+    border-right: 1px solid #ddd;
+}
+
+.right-panel {
+    width: 74%; /* 将右边栏宽度调整为74% */
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 50%; /* 将图片宽度设置为父容器宽度的50% */
+    height: auto; /* 保持图片的原始宽高比 */
+    border: 1px solid #ddd; /* 添加边框 */
+    border-radius: 0; /* 将圆角设置为0，变成方框 */
+    margin-bottom: 10px;
+    object-fit: cover; /* 确保图片覆盖整个容器，但不改变宽高比 */
+}
+
+.info h1 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.skills, .hobbies {
+    margin-top: 20px;
+}
+
+.skills h2, .hobbies h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.skill-icons, .hobby-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #666;
+    margin: 5px;
+}
+
+.experience, .education {
+    margin-top: 20px;
+}
+
+.experience h2, .education h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.job {
+    margin-bottom: 20px;
+}
+
+.job h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.job p {
+    margin: 5px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+.school {
+    margin-bottom: 20px;
+}
+
+.school h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.school p {
+    margin: 5px 0;
+}
+
+.projects {
+    margin-top: 20px;
+}
+
+.projects h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.project p {
+    margin: 5px 0;
+}

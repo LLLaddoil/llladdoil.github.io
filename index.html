@@ -59,11 +59,11 @@
         .contact-info {
             margin: 30px 0;
         }
-        /* 联系方式改为横向排列 */
+        /* 联系方式改为横向排列（已删除间隔：gap设为0） */
         .contact-list {
             display: flex;
             flex-direction: column;
-            gap: 8px; /* 控制行间距 */
+            gap: 0; /* 关键修改：此属性控制间隔，已设为0 */
         }
         .contact-item {
             display: flex;
@@ -149,10 +149,10 @@
             color: #3498db;
             margin-bottom: 10px;
         }
-        .project-list, .education-list {
+        .project-list, .education-list, .self-evaluation-list {
             list-style-position: inside;
         }
-        .project-list li, .education-list li {
+        .project-list li, .education-list li, .self-evaluation-list li {
             margin: 10px 0;
         }
     </style>
@@ -162,20 +162,18 @@
         <!-- 左侧栏 -->
         <div class="sidebar">
             <div class="profile">
-                <!-- 照片容器（自适应大小） -->
                 <div class="avatar-container">
                     <img src="../t/个人照片.jpg" alt="个人照片" class="avatar">
                 </div>
                 <h1 class="name">黎海明</h1>
                 <p class="job-title">性别:男</p>
                 <p class="job-title">年龄:23岁</p>
-                <p class="job-title">20226年应届生</p>
+                <p class="job-title">2026年应届生</p> 
 
             </div>
 
             <div class="contact-info">
                 <h3 class="sidebar-section-title">联系方式</h3>
-                <!-- 横向排列的联系方式 -->
                 <div class="contact-list">
                     <div class="contact-item">
                         <span>电话:</span>
@@ -197,16 +195,20 @@
                 <h3 class="sidebar-section-title">专业技能</h3>
                 <ul class="skill-list">
                     <li class="skill-item">
-                        <span>HTML5/CSS3</span>
-                        <span class="skill-proficiency">熟练</span>
+                        <span>HTML/CSS</span>
+                        <span class="skill-proficiency"></span>
                     </li>
                     <li class="skill-item">
                         <span>JavaScript</span>
-                        <span class="skill-proficiency">熟练</span>
+                        <span class="skill-proficiency"></span>
                     </li>
                     <li class="skill-item">
                         <span>Python</span>
-                        <span class="skill-proficiency">熟练</span>
+                        <span class="skill-proficiency"></span>
+                    </li>
+                     <li class="skill-item">
+                        <span>熟悉运用WPS Office三件套</span>
+                        <span class="skill-proficiency"></span>
                     </li>
                 </ul>
             </div>
@@ -216,30 +218,50 @@
                 <ul class="skill-list">
                     <li class="skill-item">
                         <span>英语（CET-4）</span>
-                        <span class="skill-proficiency">流利</span>
+                        <span class="skill-proficiency"></span>
                     </li>
                 </ul>
             </div>
+
+
+            <div class="hobbies">
+                <h3 class="sidebar-section-title">爱好特长</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <span>打篮球，听音乐，看电影，偶尔看看纸质书籍，上网了解专业知识</span>
+                        <span class="skill-proficiency"></span>
+                    </li>
+                    <li class="skill-item">
+                        <span></span>
+                        <span class="skill-proficiency"></span>
+                    </li>
+                    <li class="skill-item">
+                        <span></span>
+                        <span class="skill-proficiency"></span>
+                    </li>
+                </ul>
+            </div>
+
         </div>
 
         <!-- 右侧内容区 -->
         <div class="main-content">
-            <!-- 导航链接 -->
+            <!-- 导航链接：新增“自我评价”导航，实现点击跳转 -->
             <div class="nav-links">
                 <div class="nav-link" onclick="scrollToSection('about')">关于我</div>
                 <div class="nav-link" onclick="scrollToSection('experience')">工作经验</div>
                 <div class="nav-link" onclick="scrollToSection('projects')">项目经验</div>
                 <div class="nav-link" onclick="scrollToSection('education')">教育背景</div>
                 <div class="nav-link" onclick="scrollToSection('certificates')">证书</div>
+                <div class="nav-link" onclick="scrollToSection('self-evaluation')">自我评价</div>
             </div>
 
-            <!-- 关于我 -->
             <div id="about" class="content-section">
                 <h2 class="section-title">关于我</h2>
-                <p>本人是2026年应届生，就读于深圳职业技术大学,专业是通信软件技术专业，熟悉HTML、CSS、JavaScript及Python等技术，具备良好的学习能力和团队协作精神，往后也会主动不断学习相关知识，提高自身的技能。</p>
+                <p>本人是2026年应届生，就读于深圳职业技术大学，专业是通信软件技术专业，熟悉HTML、CSS、JavaScript及Python等技术，具备良好的学习能力和团队协作精神，往后也会主动不断学习相关知识，提高自身的技能。</p>
             </div>
 
-            <!-- 工作经验 -->
+
             <div id="experience" class="content-section">
                 <h2 class="section-title">工作经验</h2>
                 <div class="timeline-item">
@@ -252,30 +274,29 @@
                         <li></li>
                         <li></li>
                         <li></li>
-                        <li></li>
                     </ul>
                 </div>
                 
             </div>
 
-            <!-- 项目经验 -->
+
             <div id="projects" class="content-section">
                 <h2 class="section-title">项目经验</h2>
                 <div class="timeline-item">
                     <div class="timeline-header">
-                        <div class="timeline-title">创建html自我介绍简历</div>
+                        <div class="timeline-title">HTML自我介绍简历创建</div>
                         <div class="timeline-date">2025.05 - 2025.06</div>
                     </div>
-                    <div class="timeline-company"></div>
+                    <div class="timeline-company">个人项目 | 独立开发</div>
                     <ul class="project-list">
-                        <li>使用了&lt;div&gt;、&lt;h1&gt;-&lt;h3&gt;、&lt;ul&gt;、&lt;li&gt;等标签进行构建骨架</li>
-                        <li>使用了flex弹性布局分成左右架构，object-fit: cover进行图片自动适应等</li>
-                        <li>使用了scrollToSection函数同时结合scrollIntoView方法进行点击标题定位效果</li>
+                        <li>使用div、h1-h3、ul、li等语义化标签构建页面骨架，确保结构清晰易读</li>
+                        <li>采用Flex弹性布局实现左右分栏设计，通过object-fit: cover属性保证头像自适应显示</li>
+                        <li>采用scrollToSection函数结合scrollIntoView方法，实现导航栏点击定位的平滑滚动效果</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- 教育背景 -->
+
             <div id="education" class="content-section">
                 <h2 class="section-title">教育背景</h2>
                 <div class="timeline-item">
@@ -285,26 +306,34 @@
                     </div>
                     <div class="timeline-company">深圳职业技术大学 | 大专 </div>
                     <ul class="education-list">
-                        <li>专业排名前35%</li>
-                        <li>在校期间参加了校内的社会实践，获得了较多的社会实践经验</li>
-                        <li>参加课外的活动，增加自身专业知识，比如python、前端知识等</li>
+                        <li>专业排名前35%，主修《Web前端开发》《Python编程》《通信原理》等课程</li>
+                        <li>参与校内社会实践活动，负责活动宣传页面的简单开发，积累团队协作经验</li>
+                        <li>通过在线课程自学Vue框架基础，拓展前端技术栈，提升技术应用能力</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- 证书荣誉 -->
             <div id="certificates" class="content-section">
                 <h2 class="section-title">证书荣誉</h2>
                 <ul class="project-list">
-                    <li>CET 4</li>
-                    <li>华为HCIA证</li>
+                    <li>CET-4证书</li>
+                    <li>华为HCIA证书</li>
                 </ul>
             </div>
+
+            <div id="self-evaluation" class="content-section">
+                <h2 class="section-title">个人自述</h2>
+                <ul class="self-evaluation-list">
+                    <li>个人自述:如果我能有幸被贵司给录取，这将是我的第一份工作。我合理分配时间的能力极强。在校期间我能平衡学习和生活的时间。在专业技能上，我认为我是合格水平的，往后也会继续学习相关的专业知识和职位所需的能力知识。我也曾参加过华为云赛道的比赛，在其中获取了很多经验和知识。
+“时间就是金钱 效率就是生命”，尽管有时候我会因为效率导致任务无法高质量完成，但我乐于学习，也希望最终能通过我的学习高质量高效率地完成任务</li>
+                </ul>
+            </div>
+
         </div>
     </div>
 
     <script>
-        // 滚动到指定区域的函数
+
         function scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
             if (section) {
